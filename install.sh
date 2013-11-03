@@ -5,8 +5,6 @@ rm /etc/pacman.conf
 cp ./pacman.conf /etc/
 cp ./mirrorlist /etc/pacman.d/
 
-pacman-key -r 5EE46C4C
-pacman-key --lsign-key 5EE46C4C
 pacman -Syy
 /usr/bin/pacstrap -i /mnt $(cat /install/pacbac.repo)
 
